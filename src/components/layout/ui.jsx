@@ -67,7 +67,7 @@ export function SiteFooter() {
   const cols = [
     { h: 'SYSTEM', links: [['Experience', '/experience'], ['Devices', '/devices'], ['Intelligence', '/intelligence'], ['Control Center', '/dashboard']] },
     { h: 'COMPANY', links: [['Technology', '/technology'], ['Routines', '/routines'], ['Journal', '/journal'], ['About', '/about']] },
-    { h: 'CONTACT', links: [['Start a conversation', '/contact'], ['Journal', '/journal'], ['About', '/about'], ['Home', '/']] },
+    { h: 'CONTACT', links: [['Start a conversation', '/contact'], ['Build your environment', '/build'], ['Privacy', '/privacy'], ['Terms', '/terms']] },
   ];
   return (
     <footer className="px-3 sm:px-6 pb-6 mt-[88px]">

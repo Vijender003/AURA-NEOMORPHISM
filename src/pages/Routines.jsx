@@ -6,7 +6,12 @@ import { ChapterHead, NeuButton, Divider } from '../components/layout/ui';
 export default function Routines() {
   const [items, setItems] = useState(seed);
   const [active, setActive] = useState('morning');
+  const [live, setLive] = useState(null);
   const cur = items.find(r => r.id === active) || items[0];
+  const activate = () => {
+    setLive(cur.id);
+    setTimeout(() => setLive(null), 2400);
+  };
 
   return (
     <div className="px-3 sm:px-5">
@@ -48,7 +53,10 @@ export default function Routines() {
                 </div>
               ))}
             </div>
-            <div className="mt-5 flex gap-2.5 flex-wrap"><NeuButton primary>Activate routine</NeuButton><NeuButton to="/dashboard">Control Center</NeuButton></div>
+            <div className="mt-5 flex gap-2.5 flex-wrap" aria-live="polite">
+              <NeuButton primary onClick={activate}>{live === cur.id ? '✓ Routine live' : 'Activate routine'}</NeuButton>
+              <NeuButton to="/dashboard">Control Center</NeuButton>
+            </div>
           </motion.div>
         </div>
         <div className="mt-8"><Divider /></div>

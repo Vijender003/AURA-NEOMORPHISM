@@ -10,12 +10,17 @@ import Dashboard from './pages/Dashboard';
 import Routines from './pages/Routines';
 import Technology from './pages/Technology';
 import Journal from './pages/Journal';
+import JournalArticle from './pages/JournalArticle';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Build from './pages/Build';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import NotFound from './pages/NotFound';
 
 function ScrollTop() {
   const { pathname } = useLocation();
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' }); }, [pathname]);
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'auto' }); }, [pathname]);
   return null;
 }
 
@@ -34,9 +39,13 @@ export default function App() {
           <Route path="routines" element={<Routines />} />
           <Route path="technology" element={<Technology />} />
           <Route path="journal" element={<Journal />} />
+          <Route path="journal/:id" element={<JournalArticle />} />
+          <Route path="build" element={<Build />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<Home />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="terms" element={<Terms />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </HashRouter>

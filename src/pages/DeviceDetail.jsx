@@ -21,7 +21,7 @@ export default function DeviceDetail() {
             <h1 className="display !text-[clamp(38px,5vw,58px)] mt-2">{d.name}</h1>
             <p className="body mt-4 max-w-[48ch]">{d.desc}</p>
             <div className="mt-6 flex items-center gap-3 flex-wrap">
-              <NeuButton primary>Build your environment</NeuButton>
+              <NeuButton to="/build" primary>Build your environment</NeuButton>
               <span className="elev-recessed-sm rounded-[14px] px-4 min-h-[48px] inline-flex items-center micro inst tabular-nums !text-muted">{d.price}</span>
             </div>
           </div>
