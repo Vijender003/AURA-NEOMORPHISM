@@ -1,0 +1,78 @@
+export const devices = [
+  {
+    id: 'hub',
+    name: 'AURA HUB',
+    tag: 'Central intelligence',
+    price: '₹ 49,900',
+    desc: 'The mind of the environment. Fuses every sensor stream into one calm, decisive intelligence.',
+    specs: { compute: 'Aura N1 · on-device', range: 'Whole home mesh', power: '12W avg', material: 'Anodised aluminium · ceramic' },
+    dims: '148 × 148 × 32 mm · 620 g',
+    color: '#262828',
+  },
+  {
+    id: 'sense',
+    name: 'AURA SENSE',
+    tag: 'Environmental sensing',
+    price: '₹ 14,900',
+    desc: 'Sees what you feel. Temperature, humidity, CO₂, VOC, light, occupancy — 14 streams, every second.',
+    specs: { sensors: '14 channels', accuracy: '±0.1°C · ±1% RH', power: 'Battery 2 yr / USB-C', material: 'Matte composite · glass' },
+    dims: '72 × 72 × 18 mm · 96 g',
+    color: '#262828',
+  },
+  {
+    id: 'light',
+    name: 'AURA LIGHT',
+    tag: 'Adaptive lighting',
+    price: '₹ 18,900',
+    desc: 'Circadian-correct light that shifts from dawn amber to focus-neutral without you touching a switch.',
+    specs: { output: '800–2400 lm', temp: '1800–6500K CRI 97', power: '9.5W', material: 'Opal glass · aluminium' },
+    dims: 'Modular panels · strips · spots',
+    color: '#FFF55D',
+  },
+  {
+    id: 'air',
+    name: 'AURA AIR',
+    tag: 'Air-quality management',
+    price: '₹ 34,900',
+    desc: 'Silent purification that anticipates pollution before your lungs notice it.',
+    specs: { cadr: '420 m³/h', noise: '19 dB sleep', filter: 'HEPA-14 + carbon', material: 'Fabric · ceramic' },
+    dims: '320 × 320 × 620 mm · 11 kg',
+    color: '#262828',
+  },
+  {
+    id: 'sound',
+    name: 'AURA SOUND',
+    tag: 'Spatial audio',
+    price: '₹ 29,900',
+    desc: 'Room-aware acoustics. The space tunes itself — absorption, reflection, focus, immersion.',
+    specs: { drivers: '7 + sub array', spatial: 'Room-mapped 360°', power: '65W', material: 'Acoustic fabric · oak' },
+    dims: '640 × 140 × 140 mm',
+    color: '#262828',
+  },
+  {
+    id: 'display',
+    name: 'AURA DISPLAY',
+    tag: 'Command surface',
+    price: '₹ 39,900',
+    desc: 'A machined-glass dial-surface. The whole home, under one fingertip, with physical detents.',
+    specs: { display: '10.2” tactile e-ink + OLED ring', haptics: 'Linear + detent dial', power: 'PoE / USB-C', material: 'Gorilla glass · steel' },
+    dims: '260 × 180 × 12 mm',
+    color: '#262828',
+  },
+];
+
+export const routines = [
+  { id: 'morning', name: 'GOOD MORNING', time: '06:45', steps: [['Blinds', 'OPEN'], ['Lighting', '35% warm'], ['Temperature', '22°C'], ['Air', 'PURIFY'], ['Sound', 'Morning playlist']] },
+  { id: 'focus', name: 'DEEP FOCUS', time: '08:30', steps: [['Lighting', 'Neutral'], ['Temperature', '23°C'], ['Sound', 'OFF'], ['Notifications', 'MINIMAL'], ['Air', 'FRESH']] },
+  { id: 'return', name: 'EVENING RETURN', time: '18:40', steps: [['Lighting', 'Warm 45%'], ['Temperature', '23.5°C'], ['Sound', 'Evening mix 24%'], ['Security', 'DISARM HOME']] },
+  { id: 'sleep', name: 'NIGHT SLEEP', time: '22:30', steps: [['Lighting', 'OFF'], ['Temperature', '19°C'], ['Sound', 'SILENT'], ['Security', 'ARM NIGHT']] },
+];
+
+export const posts = [
+  { id: 'rhythm', cat: 'INTELLIGENCE', title: 'The home that keeps your rhythm', excerpt: 'Why the best automation is the one you never notice — on circadian design and calm prediction.', read: '6 min' },
+  { id: 'light-bio', cat: 'LIGHT', title: 'Light is a biological signal', excerpt: '1800K to 6500K: how spectrum shapes cortisol, focus and sleep — and how AURA tunes it.', read: '8 min' },
+  { id: 'air-math', cat: 'AIR', title: 'The mathematics of fresh air', excerpt: 'CO₂, VOC and the 96 AQI target: what clean really means, measured every second.', read: '5 min' },
+  { id: 'quiet', cat: 'SOUND', title: 'Designing quiet', excerpt: '19 decibels and the architecture of attention. Notes from our acoustic lab.', read: '7 min' },
+  { id: 'privacy', cat: 'PRIVACY', title: 'Local-first intelligence', excerpt: 'Your patterns stay in your walls. How on-device inference changes trust.', read: '4 min' },
+  { id: 'material', cat: 'DESIGN', title: 'Why controls must feel physical', excerpt: 'Detents, drag and depth: the industrial design behind Neo-Luxury Neumorphism.', read: '9 min' },
+];

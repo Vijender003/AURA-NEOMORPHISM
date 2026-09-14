@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AURA refined system — calm Neo-Luxury Neumorphism.
+   L0 flat · L1 raised · L2 elevated · L3 floating · R recessed.
+   Volt #FFF55D is micro-signal only (dots ≤8px, ticks, focus glint). */
+
+:root {
+  --base: #EAEAEA;
+  --surface: #EBEDEF;
+  --cool: #E2E7EB;
+  --deep: #D3D9DE;
+  --paper: #F4F5F6;
+  --ink: #262828;
+  --muted: #5D686F;
+  --faint: #8B959C;
+  --line: #CCD2D7;
+  --accent: #8FA7B8;
+  --active: #50616E;
+  --volt: #FFF55D;
+  --sh-d: #B9C1C7;
+  --sh-d2: #B4BCC2;
+  --radius-s: 14px;
+  --radius-m: 18px;
+  --radius-c: 22px;
+  --radius-h: 28px;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+body {
+  background: var(--base);
+  background-image: radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,.55), transparent 60%);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: #262828; color: #EAEAEA; }
+
+/* ——— Elevation (single source of truth) ——— */
+.elev-flat { background: var(--base); }
+.elev-raised {
+  background: linear-gradient(145deg, #EEEFF1, #E2E5E8);
+  box-shadow: 5px 5px 12px var(--sh-d), -5px -5px 12px #FFFFFF;
+}
+.elev-elevated {
+  background: linear-gradient(145deg, #EFF1F3, #E0E4E7);
+  box-shadow: 8px 8px 22px var(--sh-d2), -8px -8px 22px #FFFFFF;
+}
+.elev-floating {
+  background: linear-gradient(145deg, #F0F2F4, #DFE3E6);
+  box-shadow: 14px 14px 36px #AEB6BC, -14px -14px 36px #FFFFFF;
+}
+.elev-recessed {
+  background: linear-gradient(145deg, #D8DEE3, #E9EDF0);
+  box-shadow: inset 4px 4px 9px #C2C8CE, inset -4px -4px 9px #FFFFFF;
+}
+.elev-recessed-sm { background: #DEE3E7; box-shadow: inset 2px 2px 6px #C2C8CE, inset -2px -2px 6px #FFFFFF; }
+.elev-recessed-lg {
+  background: linear-gradient(145deg, #D5DBE0, #EBEFF2);
+  box-shadow: inset 6px 6px 14px #BCC3C9, inset -6px -6px 14px #FFFFFF;
+}
+/* legacy aliases */
+.neu-1 { background: linear-gradient(145deg, #EEEFF1, #E2E5E8); box-shadow: 5px 5px 12px var(--sh-d), -5px -5px 12px #FFFFFF; }
+.neu-2 { background: linear-gradient(145deg, #EFF1F3, #E0E4E7); box-shadow: 8px 8px 22px var(--sh-d2), -8px -8px 22px #FFFFFF; }
+.neu-3 { background: linear-gradient(145deg, #F0F2F4, #DFE3E6); box-shadow: 14px 14px 36px #AEB6BC, -14px -14px 36px #FFFFFF; }
+.neu-sm { background: linear-gradient(145deg, #EDEFF1, #E1E4E7); box-shadow: 3px 3px 8px #BCC3C9, -3px -3px 8px #FFFFFF; }
+.neu-in { background: linear-gradient(145deg, #D8DEE3, #E9EDF0); box-shadow: inset 4px 4px 9px #C2C8CE, inset -4px -4px 9px #FFFFFF; }
+.neu-in-sm { background: #DEE3E7; box-shadow: inset 2px 2px 6px #C2C8CE, inset -2px -2px 6px #FFFFFF; }
+.neu-in-lg { background: linear-gradient(145deg, #D5DBE0, #EBEFF2); box-shadow: inset 6px 6px 14px #BCC3C9, inset -6px -6px 14px #FFFFFF; }
+
+/* ink band — used sparingly, one per page max */
+.ink-band {
+  background: linear-gradient(160deg, #2C3030, #222525);
+  color: #EDEFEF;
+  box-shadow: 10px 10px 26px #B4BCC2, -8px -8px 20px #FFFFFF;
+}
+.ink-band .meta-label { color: #A7B0B6; }
+
+/* ——— Type ——— */
+.display { font-weight: 800; letter-spacing: -0.03em; line-height: 0.99; color: var(--ink); font-size: clamp(40px, 5.4vw, 66px); }
+.h-display-sm { font-weight: 800; letter-spacing: -0.025em; line-height: 1.02; font-size: clamp(32px, 4vw, 48px); }
+.h2 { font-weight: 800; letter-spacing: -0.02em; line-height: 1.06; font-size: clamp(26px, 3vw, 38px); }
+.h3 { font-weight: 700; letter-spacing: -0.01em; font-size: 19px; line-height: 1.3; }
+.body { color: var(--muted); line-height: 1.65; font-size: 15.5px; }
+.meta-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 650; color: var(--muted); }
+.micro { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--faint); }
+.inst { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; letter-spacing: -0.02em; }
+.rule { height: 1px; background: var(--line); opacity: 0.8; }
+
+/* ——— Tactile states (spring-like, no bounce) ——— */
+.tactile { transition: transform 180ms cubic-bezier(.22,1,.36,1), box-shadow 280ms cubic-bezier(.22,1,.36,1), background 200ms ease; }
+.tactile:hover { transform: translateY(-1px); }
+.tactile:active { transform: translateY(1px) scale(0.986); box-shadow: inset 3px 3px 8px #BCC3C9, inset -3px -3px 8px #FFFFFF !important; }
+.neu-press { transition: transform 180ms cubic-bezier(.22,1,.36,1), box-shadow 280ms ease; }
+.neu-press:hover { transform: translateY(-1px); }
+.neu-press:active { transform: translateY(1px) scale(0.986); box-shadow: inset 3px 3px 8px #BCC3C9, inset -3px -3px 8px #FFFFFF !important; }
+
+:focus-visible { outline: 2px solid #50616E; outline-offset: 3px; border-radius: 10px; }
+.volt-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--volt); box-shadow: 0 0 0 1.5px rgba(38,40,40,.85); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ——— Range (44px target, thin track) ——— */
+input[type='range'].aura-range { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; background: transparent; cursor: pointer; }
+input[type='range'].aura-range::-webkit-slider-runnable-track { height: 10px; border-radius: 999px; background: linear-gradient(145deg, #D3D9DE, #E7EBEE); box-shadow: inset 3px 3px 7px #BCC3C9, inset -3px -3px 7px #FFFFFF; }
+input[type='range'].aura-range::-webkit-slider-thumb { -webkit-appearance: none; width: 34px; height: 34px; margin-top: -12px; border-radius: 50%; background: linear-gradient(145deg, #F0F2F4, #DDE1E5); box-shadow: 4px 4px 10px #B4BCC2, -4px -4px 10px #FFFFFF; border: 1px solid rgba(255,255,255,.9); position: relative; }
+input[type='range'].aura-range::-moz-range-track { height: 10px; border-radius: 999px; background: #D8DEE3; box-shadow: inset 3px 3px 7px #BCC3C9, inset -3px -3px 7px #FFFFFF; }
+input[type='range'].aura-range::-moz-range-thumb { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(145deg, #F0F2F4, #DDE1E5); box-shadow: 4px 4px 10px #B4BCC2, -4px -4px 10px #FFFFFF; border: 1px solid rgba(255,255,255,.9); }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #EAEAEA; }
+::-webkit-scrollbar-thumb { background: #B9C1C7; border-radius: 99px; border: 2px solid #EAEAEA; }
+
+@keyframes aura-calm { 0%,100% { transform: scale(1); } 50% { transform: scale(1.015); } }
+.animate-breathe { animation: aura-calm 7s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .animate-breathe, .animate-spin-slower { animation: none !important; } }
+.text-balance { text-wrap: balance; }
